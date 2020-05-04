@@ -29,6 +29,7 @@
   "homepage": "https://github.com/nsvirk/twitter-app-download-followers#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "lowdb": "^1.0.0",
     "moment": "^2.25.1",
     "twit": "^2.2.11"
   }
