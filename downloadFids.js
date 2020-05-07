@@ -464,17 +464,31 @@
     */
     const displayFollowersIdsInDatabase = async () => {
 
-        let sql     = `SELECT u_screen_name, COUNT(f_id_str) as count FROM followers_ids GROUP BY u_screen_name ORDER BY count DESC;` ;
-        let result  =  await PgTwitterDb.pgQuery(sql) ;
-        let rowCt = result.rowCount ;
+        let sqlTotalFollowers               = `SELECT COUNT (f_id_str) FROM followers_ids;` ;
+        let resultTotalFollowers            =  await PgTwitterDb.pgQuery(sqlTotalFollowers) ;
+        let rowCountTotalFollowers          = resultTotalFollowers.rows[0].count ;
 
-            console.log('        * DISPLAY Followers IDs in Database');
+        let sqlTotalDistinctFollowers       = `SELECT COUNT (DISTINCT f_id_str) FROM followers_ids;` ;
+        let resultTotalDistinctFollowers    =  await PgTwitterDb.pgQuery(sqlTotalDistinctFollowers) ;
+        let rowCountTotalDistinctFollowers  = resultTotalDistinctFollowers.rows[0].count ;
+
+        let sqlFollowerByUserScreenName     = `SELECT u_screen_name, COUNT(f_id_str) as count FROM followers_ids GROUP BY u_screen_name ORDER BY count DESC;` ;
+        let resultFollowerByUserScreenName  =  await PgTwitterDb.pgQuery(sqlFollowerByUserScreenName) ;
+        let rowCountFollowerByUserScreenName= resultFollowerByUserScreenName.rowCount ;
+
+            console.log('        * DISPLAY stats for followers ids in database');
             console.log(AppConfig.hLine2);
+            console.log('            + Total Followers               : ' + rowCountTotalFollowers);
+            console.log('            + Total Distinct Followers      : ' + rowCountTotalDistinctFollowers);
+
+            console.log('              --------------------    -----------------');
             console.log('              u_screen_name \t \t count') ;
-            console.log('          --------------------    -----------------');
-        for (let i=0; i < rowCt; i++) {
-            console.log('           ' + (i + 1) + '\t ' + result.rows[i].u_screen_name + ' \t \t ' + result.rows[i].count);
+            console.log('              --------------------    -----------------');
+
+        for (let i=0; i < rowCountFollowerByUserScreenName; i++) {
+            console.log('            - ' + resultFollowerByUserScreenName.rows[i].u_screen_name + ' \t \t ' + resultFollowerByUserScreenName.rows[i].count);
         }
+
             console.log(AppConfig.hLine2);
 
     }
