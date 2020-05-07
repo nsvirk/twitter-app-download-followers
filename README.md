@@ -1,5 +1,5 @@
 # twitter-app-download-followers
-Twitter app to download followers information for custom twitter users
+Twitter app to download followers information for any twitter user into local database
 
 ### Requirements
 * Nodejs
