@@ -480,6 +480,7 @@
             console.log(AppConfig.hLine2);
             console.log('            + Total Followers               : ' + rowCountTotalFollowers);
             console.log('            + Total Distinct Followers      : ' + rowCountTotalDistinctFollowers);
+            console.log('            + Total Followers by User        ');
 
             console.log('              --------------------    -----------------');
             console.log('              u_screen_name \t \t count') ;
