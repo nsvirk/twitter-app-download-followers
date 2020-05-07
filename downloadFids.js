@@ -472,7 +472,7 @@
             console.log(AppConfig.hLine2);
             console.log('              u_screen_name \t \t count') ;
             console.log('          --------------------    -----------------');
-        for (let i=0; i < 11; i++) {
+        for (let i=0; i < rowCt; i++) {
             console.log('           ' + (i + 1) + '\t ' + result.rows[i].u_screen_name + ' \t \t ' + result.rows[i].count);
         }
             console.log(AppConfig.hLine2);
