@@ -2,10 +2,10 @@
   "name": "twitter-app-download-followers",
   "version": "0.0.1",
   "description": "Twitter app to download followers information for custom twitter users",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -28,9 +28,11 @@
   },
   "homepage": "https://github.com/nsvirk/twitter-app-download-followers#readme",
   "dependencies": {
+    "csv-writer": "^1.6.0",
     "dotenv": "^8.2.0",
     "lowdb": "^1.0.0",
     "moment": "^2.25.1",
+    "pg": "^8.0.3",
     "twit": "^2.2.11"
   }
 }

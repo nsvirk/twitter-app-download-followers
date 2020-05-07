@@ -2,35 +2,29 @@
 class keys {
 
     constructor() {
-        // =====================================================================
-        // App Config
-        // =====================================================================
-        //this.debug                = true ;
-        this.debug                  = false ;
-
-        // ---------------------------------------------------------------------
-        // TWITTER RELATED CONFIGURATION
-        // ---------------------------------------------------------------------
-        // No of followers to get in each GET query, Max is 5000,
-        this.get_followers_count    = 5000 ;
-
 
         // ---------------------------------------------------------------------
         // APP SETTINGS
         // ---------------------------------------------------------------------
-        // App Restart/Retry Time (In Seconds)
-        this.app_restart_interval   = 60 * 15 ; // In Seconds 60 * 15 = 15 Min
+        // App Restart/Retry Time (In Seconds) // Not dependant on Rate Limit Reset
+        // Suggested Setting = 15 Min, Cannot be less than 15 Min as this is Twitter limitation
+        this.app_restart_interval   = 60 * 15 ; // In Seconds // 60 * 15 = 15 Min
 
-        // App Database File
-        this.lowdb_file             = 'appDB.json' ;
-
+        // ---------------------------------------------------------------------
+        // TWITTER RELATED CONFIGURATION
+        // ---------------------------------------------------------------------
+        // Twitter User for whom to download folloers
+        this.target_screen_name     = 'nsvirk' ;
 
         // ---------------------------------------------------------------------
         // NODE SETTINGS
         // ---------------------------------------------------------------------
-        this.port                   = 3030 ;
+        // Node Server Port
+        this.port                   = 3701 ;
 
-        // Node Console Log Display
+        // ---------------------------------------------------------------------
+        // DISPLAY SETTINGS
+        // ---------------------------------------------------------------------
         this.hLine                  = '=================================================================================' ;
         this.hLine2                 = '---------------------------------------------------------------------------------' ;
 

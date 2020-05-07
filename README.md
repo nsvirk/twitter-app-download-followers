@@ -28,6 +28,6 @@ Twitter app to download followers information for any twitter user into local da
 
 #### Notes
    * Working app as of 05/2020, however being improved.
-   * Downloads 75,000 max possble followers ids in about 60 seconds and inserts them to postgres database
+   * Downloads 75,000 max possble followers ids in about 40 seconds and inserts them to postgres database
    * Comments and questions are welcome
    * Please give me ideas to improve this 🙏🏻
