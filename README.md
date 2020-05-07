@@ -2,18 +2,20 @@
 Twitter app to download followers information for custom twitter users
 
 ### Requirements
-* Setup Nodejs
+* Nodejs
 * Postgres
+* Twitter developer credentials
 
 ### Setup Instructions
 
 1. Clone the repository
-    * Make Directory and clone from github
-    * Run npm install
+    * Make Directory for app
+    * Clone repository from github
+    * Run npm install the dependencies in the local node_modules folder
 
 2. Setup ".env" file from "sample.env" file
-    * Enter Twitter Developer Credentials in ".env" file
-   * Enter Postgres Database Credentials in ".env" file
+    * Enter Twitter developer credentials in ".env" file
+    * Enter Postgres credentials in ".env" file
 
 3. Setup Postgres Database from provided SQL scripts in sql folder
    * Execute tableCursors.sql
