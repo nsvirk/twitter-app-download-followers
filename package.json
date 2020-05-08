@@ -1,6 +1,6 @@
 {
   "name": "twitter-app-download-followers",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Twitter app to download followers information for custom twitter users",
   "main": "app.js",
   "scripts": {
