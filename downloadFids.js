@@ -61,6 +61,8 @@
             console.log('            + Restart Time                 : ' + moment(restartTimestamp * 1000).format("DD/MM/YYYY h:mm:ss A"));
             console.log(AppConfig.hLine2);
 
+            await displayFollowersIdsInDatabase();
+
         // runApp after the interval
         setTimeout(function(){
             //screenName, cursor updated globally

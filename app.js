@@ -80,8 +80,6 @@
 
         await DownloadFids.downloadFollowersIdsInDatabase(userScreenName) ;
 
-        await DownloadFids.displayFollowersIdsInDatabase();
-
     }
 
     appMain();
