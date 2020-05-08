@@ -314,7 +314,7 @@
         console.log('            + Followers in Database        : ' + followersCountDatabase);
         console.log('            + New Followers to download    : ' + newFollowersCount );
         console.log(AppConfig.hLine2);
-        console.log('      Note  1. Min 500 followers would be downloaded, even if no new followers');
+        console.log('      Note  1. Min 5000 followers would be downloaded, even if no new followers');
         console.log('      Note  2. Followers in Database may be more than on Twitter  ');
         console.log(AppConfig.hLine2);
 
@@ -322,12 +322,8 @@
         //Set cursor to -1 to start at the begining
         params.cursor               = -1 ;
 
-        //Download minimum 500 followers
-        if (newFollowersCount < 500) {
-            params.count                = 500 ;
-        } else {
-            params.count                = newFollowersCount;
-        }
+        //Download minimum 5000 followers
+        params.count                = 5000 ;
 
 
         //------- Download followersIds ----------------------------------------
