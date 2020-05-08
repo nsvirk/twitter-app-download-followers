@@ -15,11 +15,11 @@
     "twitter",
     "app",
     "bot",
-    "followers",
-    "twitter",
-    "followers",
-    "twitter",
-    "bot"
+    "trends",
+    "searches",
+    "statuses",
+    "twitter bot",
+    "twitter trends"
   ],
   "author": "@nsvirk",
   "license": "MIT",
