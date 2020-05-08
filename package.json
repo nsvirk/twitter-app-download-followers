@@ -28,9 +28,7 @@
   },
   "homepage": "https://github.com/nsvirk/twitter-app-download-followers#readme",
   "dependencies": {
-    "csv-writer": "^1.6.0",
     "dotenv": "^8.2.0",
-    "lowdb": "^1.0.0",
     "moment": "^2.25.1",
     "pg": "^8.0.3",
     "twit": "^2.2.11"
